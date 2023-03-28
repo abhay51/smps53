@@ -1,0 +1,161 @@
+<html>
+ <head> 
+
+     <title> SMPS capacitor calculation</title>
+ </head>
+ <style>
+    table, th, td
+    {
+        border : 2px solid black;  
+        border-collapse: collapse;     
+
+    }
+    
+ </style>
+ <style>
+
+    p14 {
+
+            border: 2px solid black;
+
+    }
+ </style>
+
+ <style>
+            p {
+             width: 15%;
+                
+            }
+
+ </style>
+
+ <body>
+        <div><ul><li><b><h2> what is capacitor value as filter of SMPS ?</h2></b></li></ul> </div>
+        
+
+    <hr>
+    <div><ul><li style="color: red"><b><h2>  Ans :</h2></b></li></ul> </div>
+<div> <h2><u>Ckt Diagram</u></h2></div>
+<div> <img src="C:\Users\Admin\Downloads\SMPS.jpg" width="600" height="250" style="border: 2px solid black">
+<img src="C:\Users\Admin\Downloads\power.webp" align="right"width="700"height="240"></div>
+
+<br><br>
+
+<div> 
+      <table width="50%">
+                  <thead> 
+                         <tr>
+                            <th> Component</th>
+                            <th> Value</th>
+                         </tr>
+
+                  </thead>
+
+                  <tbody> 
+                          <tr> 
+<td align="center"> AC Voltage</td>
+<td align="center"> 230 Volts- 50 HZ</td>
+
+                          </tr>
+                          <tr> 
+                            <td align="center"> transformer primary LP</td>
+                            <td align="center"> 631 UH</td>
+                            
+                                                      </tr>
+
+                                                      <tr> 
+                                                        <td align="center"> transformer Secondary LS</td>
+                                                        <td align="center"> 500 UH</td>
+                                                        
+                                                                                  </tr>
+
+                                                                                  <tr> 
+                                                                                    <td align="center"> Load resistance </td>
+                                                                                    <td align="center"> 10K ohm</td>
+                                                                                    
+                                                                                                              </tr>                                                       
+
+
+                  </tbody>
+
+
+      </table>
+
+      
+
+
+
+</div>
+<br>
+<hr>
+    
+
+<div><p1> <b>Step 1:</b> Here <span style="color: red">Step-down transformer</span> use.
+     suppose it secondary voltage <b>12 volts</b>. Initially transformer is in <b>RMS Value</b> for capacitor
+    value we need <b>Pick to Pick voltage value</b> .</p1></div>
+
+<br><br> 
+<div> Pick to Pick Voltage = 12 x 1.44 </div>
+<div> <p style="border:2px solid black" >=16.968 Voltage</p></div> 
+<br>
+
+<hr>
+
+<div><p2> <b>Step 2:</b>Now, this voltage go into Diode where some <b>Voltage drop.</b> here in Positive half cycle 
+<b>2 Diode</b> work. and during negative half cycle <b> other 2 Diode use.</b> Suppose in Positive and negative 
+half cycle voltage drop is <b>0.7 Volts.</b>so, total voltage drop is <b>1.4 volts.</b></p2></div>
+     <br>
+<div><p4>so, voltage out of bridge rectifier is <b>16.968-1.4 = 15.568 volts</b></p4></div>
+<br>
+<div><p5> this voltage is minimum voltage to capacitor charge. for that keep voltage level more like <b>30-40%., </b>so, we take 
+voltage value <b> 20.23 volts</b></p5></div>
+    
+<br>
+<hr>
+
+<div> <p6> <b> Step 3:</b> we know , <b>Q = C x V</b></p6></div>
+<br>
+<div><p7> where, Q = I x t</p7></div>
+<br>
+
+<div><p8> so, C = I x t / V (::Q = I x t)</p8></div>
+
+<br>
+<div><p9>Here, we use <b> Voltage regulator IC 7805. </b> for constant output voltage.  
+its voltage range <b>7 to 25 Volts.</b></p9></div>
+
+<br>
+so,  here min voltage is <b>7 volts</b> and maximum <b>15.568 volts.</b>
+<div> <p10> so, Voltage = <b> 15.568-7 = 8.568 volts.</b></p10></div>
+
+<br>
+<br>
+
+<div><p11> <b>C = 1 x 10 mili second / 8.568 volts </b></p11></div>
+<br>
+ <div > <p12> <b> C = 10000 / 8.568 Volts = <span style="color: red;"> 1167 Microfarad</span></b></p12></div>
+<br>
+
+<hr> <hr> 
+
+<h3> 
+<div> <b>Note :  Here take 50% more range value capacitor.</b></div>
+<br>
+<div style="color: red"> so,<b>  C = 1750 Microfarad</b></div>
+
+<br> 
+<div> <b> But this value capacitor not available in market so, choose near range </b></div>
+
+<br> <br>
+<div> <p14 > <b> 2200 Microfarad and 25 Volts</b> </p14></div>
+
+
+</h3>
+
+
+ </body>
+
+
+
+
+</html>
